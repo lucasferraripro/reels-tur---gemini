@@ -1,0 +1,128 @@
+
+import { Template } from './types';
+
+export const FREE_TEMPLATES_COUNT = 7;
+export const FREE_SCRIPT_GENERATIONS = 1;
+export const FREE_AUDIO_GENERATIONS = 1;
+export const FREE_IMAGE_EDITS = 2;
+export const PREMIUM_PRICE = "29";
+
+export const TEMPLATES: Template[] = [
+  {
+    id: 1,
+    title: 'Maragogi - Promo 30s',
+    description: 'Abertura aérea, mergulho e CTA “Reserve já”.',
+    canvaLink: 'https://www.canva.com/design/DAGhw_eHvbM/qxWP7WwLFPC7KF7NySVs4g/view?utm_content=DAGhw_eHvbM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+    tags: ['praia', 'promo', '30s'],
+    isFree: true,
+    imagePlaceholderQuery: 'Maragogi alagoas',
+  },
+  {
+    id: 2,
+    title: 'Florianópolis',
+    description: 'Explore as praias mágicas de Florianópolis.',
+    canvaLink: 'https://www.canva.com/design/DAGhwSfDeH4/RuNAiv6jYqNO5DgZkingog/view?utm_content=DAGhwSfDeH4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+    tags: ['praia', 'ilha', 'sul'],
+    isFree: true,
+    imagePlaceholderQuery: 'florianopolis brazil',
+  },
+  {
+    id: 3,
+    title: 'Natal - Sol e Mar',
+    description: 'Dunas, praias e a cultura vibrante de Natal.',
+    canvaLink: 'https://www.canva.com/design/DAGhwzeB__g/tzzeNJVuhZ69H9bzdqjyAA/view?utm_content=DAGhwzeB__g&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+    tags: ['praia', 'nordeste', 'dunas'],
+    isFree: true,
+    imagePlaceholderQuery: 'natal rio grande do norte',
+  },
+  {
+    id: 4,
+    title: 'Destinos Feriados',
+    description: 'Template versátil para qualquer feriado.',
+    canvaLink: 'https://www.canva.com/design/DAG2e15f7q4/CwiKH8s1RN4IZDbZvYMsGg/view?utm_content=DAG2e15f7q4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+    tags: ['feriado', 'promo', 'versátil'],
+    isFree: true,
+    imagePlaceholderQuery: 'viagem feriado',
+  },
+  {
+    id: 5,
+    title: 'Fernando de Noronha',
+    description: 'O paraíso brasileiro em um vídeo incrível.',
+    canvaLink: 'https://www.canva.com/design/DAGgHZ-fCuI/RFrxKhGE6O92snzhuuv0BA/view?utm_content=DAGgHZ-fCuI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+    tags: ['ilha', 'luxo', 'natureza'],
+    isFree: true,
+    imagePlaceholderQuery: 'fernando de noronha',
+  },
+  {
+    id: 6,
+    title: 'Florianópolis - SC',
+    description: 'As belezas da ilha da magia.',
+    canvaLink: 'https://www.canva.com/design/DAGhx_YRl4E/KkH3YyyjWUbaHasgdbRhnw/view?utm_content=DAGhx_YRl4E&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+    tags: ['praia', 'sul', 'aventura'],
+    isFree: true,
+    imagePlaceholderQuery: 'praia de jurere florianopolis',
+  },
+  {
+    id: 7,
+    title: 'Fortaleza - CE',
+    description: 'Sol, praia e muita diversão em Fortaleza.',
+    canvaLink: 'https://www.canva.com/design/DAGhx2zhYTo/TP_AUJzDtnYgSNnPH1pBQQ/view?utm_content=DAGhx2zhYTo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview',
+    tags: ['nordeste', 'praia', 'cultura'],
+    isFree: true,
+    imagePlaceholderQuery: 'praia de iracema fortaleza',
+  },
+  {
+    id: 8,
+    title: 'Paris - França',
+    description: 'Viva o romance na cidade luz.',
+    canvaLink: '#',
+    tags: ['europa', 'romance', 'cidade'],
+    isFree: false,
+    imagePlaceholderQuery: 'paris eiffel tower',
+  },
+  {
+    id: 9,
+    title: 'Chapada Diamantina',
+    description: 'Aventura e natureza exuberante.',
+    canvaLink: '#',
+    tags: ['brasil', 'trilha', 'aventura'],
+    isFree: false,
+    imagePlaceholderQuery: 'chapada diamantina',
+  },
+  {
+    id: 10,
+    title: 'Jalapão - Tocantins',
+    description: 'Descubra o deserto das águas.',
+    canvaLink: '#',
+    tags: ['brasil', 'ecoturismo', 'deserto'],
+    isFree: false,
+    imagePlaceholderQuery: 'jalapao tocantins',
+  },
+  {
+    id: 11,
+    title: 'Nova York - EUA',
+    description: 'A cidade que nunca dorme.',
+    canvaLink: '#',
+    tags: ['internacional', 'cidade', 'eua'],
+    isFree: false,
+    imagePlaceholderQuery: 'new york city',
+  },
+   {
+    id: 12,
+    title: 'Tóquio - Japão',
+    description: 'Tradição e modernidade em um só lugar.',
+    canvaLink: '#',
+    tags: ['asia', 'cultura', 'cidade'],
+    isFree: false,
+    imagePlaceholderQuery: 'tokyo japan',
+  },
+  {
+    id: 13,
+    title: 'Roma - Itália',
+    description: 'História e gastronomia em cada esquina.',
+    canvaLink: '#',
+    tags: ['europa', 'historia', 'italia'],
+    isFree: false,
+    imagePlaceholderQuery: 'rome colosseum',
+  },
+];

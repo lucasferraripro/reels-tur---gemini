@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Template, Plan } from '../types';
 import { LockClosedIcon, SparklesIcon } from './icons/Icons';
@@ -11,24 +10,22 @@ interface TemplateCardProps {
 
 const TemplateCard: React.FC<TemplateCardProps> = ({ template, onClick, userPlan }) => {
   const isLocked = !template.isFree && userPlan === Plan.Free;
-  const imageUrl = `https://picsum.photos/seed/${encodeURIComponent(template.imagePlaceholderQuery)}/400/711`;
+  const imageUrl = template.coverImage || `https://picsum.photos/seed/${encodeURIComponent(template.imagePlaceholderQuery)}/400/400`;
 
   return (
     <div 
       onClick={() => onClick(template)} 
-      className="relative group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer bg-gray-700 aspect-[9/16]"
+      className="relative group rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer bg-gray-700 aspect-square"
     >
       <img src={imageUrl} alt={template.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
       
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
       
-      <div className="absolute bottom-0 left-0 p-4 text-white w-full">
-        <h3 className="font-bold font-display text-lg">{template.title}</h3>
-        <div className="flex flex-wrap gap-1 mt-2">
-          {template.tags.map(tag => (
-            <span key={tag} className="px-2 py-0.5 text-xs bg-white/20 rounded-full">{tag}</span>
-          ))}
-        </div>
+      <div className="absolute bottom-0 left-0 p-3 text-white w-full">
+        <h3 className="font-bold font-display text-sm truncate">{template.title}</h3>
+        {template.tags[0] && (
+          <span className="text-xs text-white/80 capitalize">{template.tags[0]}</span>
+        )}
       </div>
 
       {!template.isFree && (
@@ -40,11 +37,8 @@ const TemplateCard: React.FC<TemplateCardProps> = ({ template, onClick, userPlan
 
       {isLocked && (
         <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center p-4">
-          <LockClosedIcon className="w-12 h-12 text-accent-400" />
-          <p className="mt-2 font-semibold text-white">Exclusivo para assinantes</p>
-          <button className="mt-4 px-4 py-2 text-sm font-bold bg-secondary text-white rounded-full">
-            Fazer Upgrade
-          </button>
+          <LockClosedIcon className="w-10 h-10 text-accent-400" />
+          <p className="mt-2 text-xs font-semibold text-white">Exclusivo Premium</p>
         </div>
       )}
     </div>

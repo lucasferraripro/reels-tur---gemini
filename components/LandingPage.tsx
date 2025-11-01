@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { CheckCircleIcon } from './icons/Icons';
+import Newsletter from './Newsletter';
 
 interface LandingPageProps {
   onStartFreeTrial: () => void;
@@ -52,6 +52,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onStartFreeTrial }) => {
           </div>
         </div>
       </section>
+      <Newsletter />
     </div>
   );
 };

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Template } from '../types';
 import { XMarkIcon, PencilSquareIcon, SparklesIcon } from './icons/Icons';
@@ -10,7 +9,7 @@ interface TemplateModalProps {
 }
 
 const TemplateModal: React.FC<TemplateModalProps> = ({ template, onClose, onGenerate }) => {
-  const imageUrl = `https://picsum.photos/seed/${encodeURIComponent(template.imagePlaceholderQuery)}/450/800`;
+  const imageUrl = template.coverImage || `https://picsum.photos/seed/${encodeURIComponent(template.imagePlaceholderQuery)}/450/800`;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4" onClick={onClose}>
@@ -45,13 +44,6 @@ const TemplateModal: React.FC<TemplateModalProps> = ({ template, onClose, onGene
               <PencilSquareIcon className="w-5 h-5 mr-2" />
               Editar no Canva
             </a>
-            <button 
-              onClick={onGenerate}
-              className="w-full flex items-center justify-center py-3 px-4 text-white font-semibold bg-primary-600 rounded-lg hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition duration-300"
-            >
-              <SparklesIcon className="w-5 h-5 mr-2" />
-              Gerar Roteiro e Voz com IA
-            </button>
           </div>
         </div>
       </div>

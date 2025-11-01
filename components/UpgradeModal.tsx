@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { XMarkIcon, CheckCircleIcon, StarIcon } from './icons/Icons';
 import { PREMIUM_PRICE } from '../constants';
@@ -26,15 +25,15 @@ const UpgradeModal: React.FC<UpgradeModalProps> = ({ onClose, onUpgrade }) => {
         <ul className="mt-8 space-y-3 text-left">
           <li className="flex items-start">
             <CheckCircleIcon className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
-            <span><span className="font-semibold">Acesso ilimitado</span> a todos os templates de vídeo.</span>
+            <span><span className="font-semibold">Acesso ilimitado</span> a todos os templates e vídeos para baixar.</span>
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
-            <span><span className="font-semibold">Gerações ilimitadas</span> de roteiros e vozes com IA.</span>
+            <span><span className="font-semibold">Gerações ilimitadas</span> de roteiros, vozes, artes e campanhas com IA.</span>
           </li>
-           <li className="flex items-start">
+          <li className="flex items-start">
             <CheckCircleIcon className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
-            <span><span className="font-semibold">Edições ilimitadas</span> de imagens com IA.</span>
+            <span>Acesso ao <span className="font-semibold">Criador de Campanhas Estratégicas.</span></span>
           </li>
           <li className="flex items-start">
             <CheckCircleIcon className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
@@ -44,7 +43,7 @@ const UpgradeModal: React.FC<UpgradeModalProps> = ({ onClose, onUpgrade }) => {
 
         <div className="mt-8">
             <a 
-                href="https://pay.hotmart.com" // Placeholder link for Hotmart checkout
+                href="https://pay.hotmart.com/S102575817L?checkoutMode=10"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setTimeout(onUpgrade, 500)} // Simulate upgrade after click
